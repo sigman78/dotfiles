@@ -74,3 +74,10 @@ export LANG=en_US.UTF-8
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# fd + fzf settings
+FZF_DEFAULT_COMMAND='fd --type file --follow --hidden --exclude .git'
+FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# qt
+# export PATH="/usr/local/opt/qt/bin:$PATH"

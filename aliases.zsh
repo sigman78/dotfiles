@@ -8,6 +8,10 @@ weather() { curl -4 wttr.in }
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 alias c="clear"
 
+# Fuzzy search + cd
+alias cdf='cd $(dirname $(fzf))'
+alias cdd='cd $(fd --type d --follow --hidden | fzf)'
+
 # Directories
 alias dotfiles="cd $DOTFILES"
 alias library="cd $HOME/Library"
@@ -39,3 +43,54 @@ alias gc="git checkout"
 alias gd="git diff"
 alias gl="git log --oneline --decorate --color"
 alias gnuke="git clean -df && git reset --hard"
+
+### Fast git-lfs support
+ 
+# Convenient aliases
+alias enable_smudge='git config --global filter.lfs.smudge "git-lfs smudge -- %f" && printf "\nSmudge filter enabled.\n"'
+alias enable_filter_process='git config --global filter.lfs.process "git-lfs filter-process" && printf "Filter process enabled.\n"'
+alias disable_smudge='git config --global filter.lfs.smudge "git-lfs smudge --skip %f" && printf "Smudge filter disabled.\n"'
+alias disable_filter_process='git config --global filter.lfs.process "git-lfs filter-process --skip" && printf "Filter process disabled.\n"'
+alias lfs_cleanup='git lfs fetch; git lfs checkout'
+alias print_warning='printf "Attention: if process was terminated outside, run fix_lfs_config and clear_branch to enable smudge filter and filter-process back.\n"'
+alias clear_branch='git add .; git reset --hard; git clean -df'
+  
+# Fast pull
+fpull() {
+    print_warning
+    disable_smudge
+    disable_filter_process
+    git pull
+    lfs_cleanup
+    enable_smudge
+    enable_filter_process
+}
+  
+# Fast checkout
+fcheck() {
+    print_warning
+    disable_smudge
+    disable_filter_process
+    git checkout $1
+    lfs_cleanup
+    enable_smudge
+    enable_filter_process
+}
+  
+# Fast checkout and pull
+fcheckp() {
+    print_warning
+    disable_smudge
+    disable_filter_process
+    git checkout $1 && git pull
+    lfs_cleanup
+    enable_smudge
+    enable_filter_process
+}
+  
+# Resetting git-lfs config to default
+fix_lfs_config() {
+    enable_smudge
+    enable_filter_process
+}
+
