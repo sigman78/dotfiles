@@ -43,6 +43,7 @@ cask 'dropbox'
 # cask 'google-backup-and-sync'
 cask 'google-chrome'
 cask 'gpg-suite'
+cask 'iterm2'
 # cask 'insomnia'
 # cask 'java'
 # cask 'mysqlworkbench'
@@ -91,3 +92,4 @@ mas 'The Unarchiver', id: 425424353
 # Dev tools
 cask 'qt-creator'
 cask 'visual-studio-code'
+cask 'fork'

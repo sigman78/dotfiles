@@ -43,6 +43,7 @@ alias gc="git checkout"
 alias gd="git diff"
 alias gl="git log --oneline --decorate --color"
 alias gnuke="git clean -df && git reset --hard"
+alias grt='cd $(git rev-parse --show-toplevel || echo ".")'
 
 ### Fast git-lfs support
  
