@@ -1,95 +1,95 @@
-# Taps
-tap 'caskroom/cask'
-tap 'caskroom/eid'
-tap 'caskroom/fonts'
-tap 'caskroom/versions'
-tap 'homebrew/bundle'
-
-# Binaries
-# brew 'awscli'
-brew 'bash' # Bash 4
-brew 'bat'
-brew 'coreutils' # Those that come with macOS are outdated
-brew 'fd'
-brew 'fzf'
-brew 'git'
-brew 'gnupg2'
-brew 'grep'
-brew 'mackup'
-brew 'mas'
-brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
-brew 'trash'
-brew 'tree'
-brew 'zsh'
-brew 'zsh-completions'
-
-# Development
-# brew 'php'
-# brew 'imagick'
-# brew 'mysql'
-# brew 'node'
-# brew 'redis'
-
-# Apps
-# cask 'aerial'
-cask 'alfred'
-cask 'caffeine'
-# cask 'discord'
-# cask 'docker'
-cask 'dropbox'
-# cask 'eid-be'
-# cask 'eid-be-viewer'
-# cask 'firefox'
-# cask 'google-backup-and-sync'
-cask 'google-chrome'
-cask 'gpg-suite'
-cask 'iterm2'
-# cask 'insomnia'
-# cask 'java'
-# cask 'mysqlworkbench'
-# cask 'phpstorm'
-# cask 'sequel-pro'
-# cask 'skype'
-# cask 'slack'
-cask 'sublime-text'
-# cask 'tableplus'
-# cask 'there'
-# cask 'tor-browser'
-# cask 'tower2'
-# cask 'transmit'
-# cask 'vagrant'
-# cask 'virtualbox'
-# cask 'virtualbox-extension-pack'
-
-# Quicklook
-cask 'qlcolorcode'
-cask 'qlmarkdown'
-cask 'quicklook-json'
-cask 'quicklook-csv'
-cask 'qlstephen'
-
-# Fonts
-cask 'font-lato'
-cask 'font-open-sans'
-cask 'font-roboto'
-cask 'font-source-code-pro-for-powerline'
-cask 'font-source-code-pro'
-cask 'font-source-sans-pro'
-cask 'font-source-serif-pro'
-
-# Mac App Store
-# mas '1Password', id: 1333542190
-# mas 'Byword', id: 420212497
-# mas 'Giphy Capture', id: 668208984
-# mas 'Keynote', id: 409183694
-# mas 'Sip', id: 507257563
-# mas 'Spark', id: 1176895641
-mas 'The Unarchiver', id: 425424353
-# mas 'Things', id: 904280696
-# mas 'Tweetbot', id: 1384080005
-# mas 'WhatsApp', id: 1147396723 
-
-# Dev tools
-cask 'qt-creator'
-cask 'visual-studio-code'
-cask 'fork'
+tap "caskroom/cask"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-eid"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "michaeleisel/zld"
+tap "yurikoles/yurikoles"
+brew "awscli"
+brew "bash"
+brew "bat"
+brew "bear"
+brew "bloaty"
+brew "ccache"
+brew "cmake"
+brew "coreutils"
+brew "dos2unix"
+brew "fd"
+brew "ffmpeg"
+brew "fish"
+brew "fzf"
+brew "git"
+brew "git-lfs"
+brew "git-subrepo"
+brew "gnupg", link: false
+brew "go"
+brew "grep"
+brew "grpcurl"
+brew "htop"
+brew "imagemagick"
+brew "lolcat"
+brew "mackup"
+brew "mas"
+brew "midnight-commander"
+brew "ncdu"
+brew "ninja"
+brew "node"
+brew "p7zip"
+brew "par"
+brew "parallel"
+brew "pkg-config"
+brew "protobuf@3.6"
+brew "python@3.9"
+brew "qrencode"
+brew "rush"
+brew "rustup-init"
+brew "stow"
+brew "tmux"
+brew "trash"
+brew "tree"
+brew "unrar"
+brew "watch"
+brew "watchman"
+brew "wget"
+brew "zsh"
+brew "zsh-completions"
+brew "michaeleisel/zld/zld"
+brew "yurikoles/yurikoles/far2l", args: ["HEAD"]
+cask "alfred"
+cask "barrier"
+cask "caffeine"
+cask "font-fira-code"
+cask "font-lato"
+cask "font-open-sans"
+cask "font-roboto"
+cask "font-source-code-pro"
+cask "font-source-code-pro-for-powerline"
+cask "font-source-sans-pro"
+cask "font-source-serif-pro"
+cask "fork"
+cask "github"
+cask "google-backup-and-sync"
+cask "google-cloud-sdk"
+cask "gpg-suite"
+cask "iina"
+cask "iterm2"
+cask "joplin"
+cask "meld"
+cask "qlcolorcode"
+cask "qlmarkdown"
+cask "qlstephen"
+cask "quicklook-csv"
+cask "quicklook-json"
+cask "sampler"
+cask "slack"
+cask "sourcetree"
+cask "stack"
+cask "sublime-text"
+cask "there"
+cask "visual-studio-code"
+# cask "vlc"
+cask "webpquicklook"
+mas "Microsoft Remote Desktop", id: 1295203466
+mas "Xcode", id: 497799835

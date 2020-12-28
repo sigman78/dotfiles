@@ -81,3 +81,5 @@ FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # qt
 # export PATH="/usr/local/opt/qt/bin:$PATH"
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
